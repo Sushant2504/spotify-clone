@@ -19,4 +19,12 @@ class AppTextStyles {
    );
 
 
+   //textstyle of the modes of the texts...
+   static const TextStyle Mode_title = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+    color: Colors.white,
+   );
+
+
 }

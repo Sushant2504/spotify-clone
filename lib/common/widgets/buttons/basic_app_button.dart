@@ -1,24 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/core/configs/theme/app_colors.dart';
+import 'package:spotify/core/configs/theme/app_textstyles.dart';
 
-
-// basic button for the use on the onboarding pages ..... 
+// basic button for the use on the onboarding pages .....
 
 class BasicAppButton extends StatelessWidget {
-    final VoidCallback onPressed;
-    final String title; 
-    final double height;
+  
+  final String title;
+  final double? height;
 
-    BasicAppButton({required this.onPressed, required this.title, required this.height});
+  BasicAppButton(
+      {required this.title, required this.height});
 
-    @override
-    Widget build(BuildContext context) {
-     return ElevatedButton(
-       onPressed: onPressed,
-       style: ElevatedButton.styleFrom(
-        //  primary: Colors.green,
-         minimumSize: Size.fromHeight(height),
-       ),
-       child: Text(title),
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+
+         height: height ?? 80,
+         decoration: BoxDecoration(
+             borderRadius: BorderRadius.circular(30),
+             color: AppColors.primary,
+             
+         ),
+
+         child: Center(
+           child: Text(
+             title,
+             style: AppTextStyles.Intro_title_1,
+           ),
+         ),
       );
-    }
+  }
 }

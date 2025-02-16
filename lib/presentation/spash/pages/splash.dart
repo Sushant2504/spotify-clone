@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:spotify/core/configs/assets/app_vectors.dart';
+import 'package:spotify/presentation/auth/pages/signup_or_signin.dart';
+import 'package:spotify/presentation/choose_mode/pages/choose_mode.dart';
 import 'package:spotify/presentation/intro/pages/get_started.dart';
 
 
@@ -36,7 +38,7 @@ class _SplashPageState extends State<SplashPage> {
     Navigator.pushReplacement(
        context,
        MaterialPageRoute(
-         builder: (context) => GetStartPage(),
+         builder: (context) => SignupOrSignin(),
        ),
     );
   }
